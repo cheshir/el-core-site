@@ -1,0 +1,11 @@
+
+/*
+  This file is intentionally kept minimal.
+  Styling is primarily handled by Tailwind CSS, loaded via CDN in index.html.
+  You can add global base styles here if absolutely necessary.
+*/
+body {
+  font-family: 'Inter', sans-serif; /* Ensure font is applied */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
