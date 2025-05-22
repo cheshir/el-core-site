@@ -23,7 +23,7 @@ export const HeroSection: React.FC = () => {
             Specializing in tech, product, and leadership roles for complex industries.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-            <Button href="https://cal.com/tetiana-borysova-elevate-core/30min" variant="primary" size="lg" className="w-full sm:w-auto">
+            <Button href={SOCIAL_LINKS.calendly} variant="primary" size="lg" className="w-full sm:w-auto">
               Book a Discovery Call
             </Button>
             <div className="flex items-center space-x-4 mt-4 sm:mt-0">

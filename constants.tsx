@@ -112,5 +112,6 @@ export const SOCIAL_LINKS = {
   whatsapp: 'https://wa.me/385919497822',
   telegram: 'https://t.me/elevate_core',
   linkedin: 'https://www.linkedin.com/company/elevate-core',
-  email: 'mailto:hello@el-core.eu'
+  email: 'mailto:hello@el-core.eu',
+  calendly: 'https://cal.com/tetiana-borysova-elevate-core/30min',
 };

@@ -15,7 +15,7 @@ export const CtaSection: React.FC = () => {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
           <Button 
-            href="https://calendly.com/your-el-core-link" // Replace with actual Calendly link
+            href={SOCIAL_LINKS.calendly}
             target="_blank" 
             rel="noopener noreferrer"
             variant="primary" 
