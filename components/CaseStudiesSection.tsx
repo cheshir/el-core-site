@@ -21,14 +21,14 @@ const CaseStudyCard: React.FC<{ caseItem: CaseStudy }> = ({ caseItem }) => (
         {caseItem.companyName}
       </h3>
       <p className="text-xl font-bold text-brand-primary mb-4 flex-grow">{caseItem.result}</p>
-      <Button 
+      {/* <Button 
         href={caseItem.detailsUrl} 
         variant="link" 
         className="mt-auto self-start !px-0 !py-0"
         rightIcon={<ChevronRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
       >
         Learn More
-      </Button>
+      </Button> */}
     </div>
   </div>
 );
@@ -50,11 +50,11 @@ export const CaseStudiesSection: React.FC = () => {
             <CaseStudyCard key={study.id} caseItem={study} />
           ))}
         </div>
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Button href="#explore-cases" variant="primary" size="lg">
             Explore All Case Studies
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

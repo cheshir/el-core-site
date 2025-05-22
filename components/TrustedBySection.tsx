@@ -73,17 +73,18 @@ export const TrustedBySection: React.FC = () => {
         </div>
         
         <div className="flex flex-col md:flex-row justify-center items-center flex-wrap gap-8 md:gap-10 lg:gap-12">
-          {/* GoodFirms Review Widget (Line) */}
+          {/* Original Clutch Widget */}
           <div 
-            className="goodfirm-widget min-h-[70px] flex justify-center items-center" 
-            data-widget-type="goodfirms-widget-t5" 
-            data-widget-pattern="review-line" 
-            data-height="70" 
-            data-company-id="176866"
+            className="clutch-widget min-h-[45px] flex justify-center items-center" 
+            style={{ width: '190px' }}
+            data-url="https://widget.clutch.co" 
+            data-widget-type="2" 
+            data-height="45" 
+            data-nofollow="true" 
+            data-expandifr="true" 
+            data-clutchcompany-id="2475120"
             aria-live="polite"
-          >
-            {/* Optional: loading indicator while script loads and populates */}
-          </div>
+          ></div>
 
           {/* GoodFirms Badge */}
           <div className="flex justify-center items-center">
@@ -101,38 +102,15 @@ export const TrustedBySection: React.FC = () => {
               />
             </a>
           </div>
-          
-          {/* Original Clutch Widget */}
-          <div 
-            className="clutch-widget min-h-[45px] flex justify-center items-center" 
-            data-url="https://widget.clutch.co" 
-            data-widget-type="2" 
-            data-height="45" 
-            data-nofollow="true" 
-            data-expandifr="true" 
-            data-clutchcompany-id="2475120"
-            aria-live="polite"
-          ></div>
 
           {/* New GoodFirms Star Widget */}
           <div 
-            className="goodfirm-widget min-h-[100px] flex justify-center items-center"
+            className="goodfirm-widget min-h-[150px] flex justify-center items-center md:mx-5 -m-5"
+            style={{ width: '170px'}}
             data-widget-type="goodfirms-widget-t3" 
             data-widget-pattern="star-basic" 
-            data-height="100" 
+            data-height="150" 
             data-company-id="176866"
-            aria-live="polite"
-          ></div>
-
-          {/* New (additional) Clutch Widget */}
-          <div 
-            className="clutch-widget min-h-[45px] flex justify-center items-center"
-            data-url="https://widget.clutch.co" 
-            data-widget-type="2" 
-            data-height="45" 
-            data-nofollow="true" 
-            data-expandifr="true" 
-            data-clutchcompany-id="2475120"
             aria-live="polite"
           ></div>
         </div>

@@ -12,7 +12,7 @@ export const HeroSection: React.FC = () => {
         aria-hidden="true"
       ></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl text-center md:text-left mx-auto md:mx-0">
+        <div className="max-w-5xl text-center md:text-left mx-auto md:mx-0">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold !leading-tight">
             Who You Hire Is <span className="text-brand-accent">Who You Become</span>.
             <br />
@@ -23,7 +23,7 @@ export const HeroSection: React.FC = () => {
             Specializing in tech, product, and leadership roles for complex industries.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-            <Button href="#contact" variant="primary" size="lg" className="w-full sm:w-auto">
+            <Button href="https://cal.com/tetiana-borysova-elevate-core/30min" variant="primary" size="lg" className="w-full sm:w-auto">
               Book a Discovery Call
             </Button>
             <div className="flex items-center space-x-4 mt-4 sm:mt-0">

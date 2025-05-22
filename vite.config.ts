@@ -5,13 +5,20 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
       },
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      server: {
+        allowedHosts: [
+          'el-core.eu',
+          'el-core-site.netlify.app',
+          'localhost',
+          'web.el-core.orb.local', 
+          'dev.el-core.orb.local',
+        ]
       }
     };
 });

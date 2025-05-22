@@ -87,10 +87,10 @@ export const PROOF_POINTS_DATA: ProofPoint[] = [
 ];
 
 export const CASE_STUDIES_DATA: CaseStudy[] = [
-  { id: 'cs1', companyName: 'FinTech Innovators Ltd.', logoUrl: 'https://picsum.photos/seed/fintechlogo/150/75?grayscale&blur=1', result: 'Scaled to 5 Senior Rust Devs in 6 Weeks for Critical Launch.', detailsUrl: '#case-studies' },
-  { id: 'cs2', companyName: 'DeepMind Labs EU', logoUrl: 'https://picsum.photos/seed/deeptechlogo/150/75?grayscale&blur=1', result: 'Recruited Lead AI Researcher, Unlocking New IP & Research Directions.', detailsUrl: '#case-studies' },
-  { id: 'cs3', companyName: 'BlockChain SecureNet', logoUrl: 'https://picsum.photos/seed/blocklogo/150/75?grayscale&blur=1', result: 'Assembled Core Blockchain Team for MVP in 8 Weeks, Securing Funding.', detailsUrl: '#case-studies' },
-  { id: 'cs4', companyName: 'iGaming Kings Plc', logoUrl: 'https://picsum.photos/seed/gaminglogo/150/75?grayscale&blur=1', result: 'Hired VP Engineering to Triple Platform Throughput & Player Capacity.', detailsUrl: '#case-studies' },
+  { id: 'cs1', companyName: 'FinTech', logoUrl: 'https://picsum.photos/seed/fintechlogo/150/75?grayscale&blur=1', result: 'Scaled to 5 Senior Rust Devs in 6 Weeks for Critical Launch.', detailsUrl: '#case-studies' },
+  { id: 'cs2', companyName: 'AI SaaS', logoUrl: 'https://picsum.photos/seed/deeptechlogo/150/75?grayscale&blur=1', result: 'Recruited Lead AI Researcher, Unlocking New IP & Research Directions.', detailsUrl: '#case-studies' },
+  { id: 'cs3', companyName: 'BlockChain', logoUrl: 'https://picsum.photos/seed/blocklogo/150/75?grayscale&blur=1', result: 'Assembled Core Blockchain Team for MVP in 8 Weeks, Securing Funding.', detailsUrl: '#case-studies' },
+  { id: 'cs4', companyName: 'iGaming', logoUrl: 'https://picsum.photos/seed/gaminglogo/150/75?grayscale&blur=1', result: 'Hired VP Engineering to Triple Platform Throughput & Player Capacity.', detailsUrl: '#case-studies' },
 ];
 
 export const TESTIMONIALS_DATA: Testimonial[] = [
@@ -109,8 +109,8 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const SOCIAL_LINKS = {
-  whatsapp: 'https://wa.me/1234567890', // Replace with actual number
-  telegram: 'https://t.me/yourprofile', // Replace
-  linkedin: 'https://linkedin.com/company/el-core', // Replace
-  email: 'mailto:hello@el-core.com'
+  whatsapp: 'https://wa.me/385919497822',
+  telegram: 'https://t.me/elevate_core',
+  linkedin: 'https://www.linkedin.com/company/elevate-core',
+  email: 'mailto:hello@el-core.eu'
 };
