@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from './ui/Button';
-import { WhatsAppIcon, TelegramIcon, LinkedInIcon, SOCIAL_LINKS } from '../constants';
+import { WhatsAppIcon, TelegramIcon, LinkedInIcon, CONTACTS } from '../constants';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -23,17 +23,17 @@ export const HeroSection: React.FC = () => {
             Specializing in tech, product, and leadership roles for complex industries.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-            <Button href={SOCIAL_LINKS.calendly} variant="primary" size="lg" className="w-full sm:w-auto">
+            <Button href={CONTACTS.calendly} variant="primary" size="lg" className="w-full sm:w-auto">
               Book a Discovery Call
             </Button>
             <div className="flex items-center space-x-4 mt-4 sm:mt-0">
-              <a href={SOCIAL_LINKS.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="text-gray-400 hover:text-brand-accent transition-colors duration-150">
+              <a href={CONTACTS.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="text-gray-400 hover:text-brand-accent transition-colors duration-150">
                 <WhatsAppIcon className="w-8 h-8" />
               </a>
-              <a href={SOCIAL_LINKS.telegram} target="_blank" rel="noopener noreferrer" aria-label="Contact on Telegram" className="text-gray-400 hover:text-brand-accent transition-colors duration-150">
+              <a href={CONTACTS.telegram} target="_blank" rel="noopener noreferrer" aria-label="Contact on Telegram" className="text-gray-400 hover:text-brand-accent transition-colors duration-150">
                 <TelegramIcon className="w-8 h-8" />
               </a>
-              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn" className="text-gray-400 hover:text-brand-accent transition-colors duration-150">
+              <a href={CONTACTS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn" className="text-gray-400 hover:text-brand-accent transition-colors duration-150">
                 <LinkedInIcon className="w-8 h-8" />
               </a>
             </div>
