@@ -58,16 +58,37 @@ const App: React.FC = () => {
           return;
         }
 
-        // For in-page anchors (not routing to a new component page)
-        if (anchor.pathname === window.location.pathname && !pageRoutes.includes(normalizedAnchorHash)) {
-           try {
-            const element = document.querySelector(anchor.hash);
-            if (element) {
-              event.preventDefault();
-              element.scrollIntoView({ behavior: 'smooth' });
+        // For in-page anchors - check if we need to navigate to home page first
+        if (!pageRoutes.includes(normalizedAnchorHash)) {
+          // If we're on a different page (terms/privacy) and clicking an in-page anchor
+          const isOnDifferentPage = pageRoutes.includes(currentPage.toLowerCase());
+          
+          if (isOnDifferentPage) {
+            // Navigate to home page first, then scroll to section
+            event.preventDefault();
+            window.location.hash = '#';
+            // Use setTimeout to allow page to render before scrolling
+            setTimeout(() => {
+              try {
+                const element = document.querySelector(anchor.hash);
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              } catch (e) {
+                console.warn("Smooth scroll failed for hash:", anchor.hash, e);
+              }
+            }, 100);
+          } else if (anchor.pathname === window.location.pathname) {
+            // We're already on the home page, just scroll
+            try {
+              const element = document.querySelector(anchor.hash);
+              if (element) {
+                event.preventDefault();
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            } catch (e) {
+              console.warn("Smooth scroll failed for hash:", anchor.hash, e);
             }
-          } catch (e) {
-            console.warn("Smooth scroll failed for hash:", anchor.hash, e);
           }
         }
       }

@@ -17,7 +17,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
     </blockquote>
     <div className="text-center mt-auto">
       <p className="font-bold text-brand-primary">{testimonial.clientName}</p>
-      <p className="text-sm text-brand-secondary">{testimonial.clientCompany}</p>
+      {/*<p className="text-sm text-brand-secondary">{testimonial.clientCompany}</p>*/}
       <p className="text-xs text-brand-accent-dark mt-1">Service: {testimonial.serviceUsed}</p>
     </div>
   </div>
