@@ -91,7 +91,7 @@ export const TrustedBySection: React.FC = () => {
             <a 
               target="_blank" 
               rel="noopener noreferrer" 
-              href="https://www.goodfirms.co/company/elevate-core"
+              href="https://www.goodfirms.co/business-services/recruiting?location=hr&rate%5B1%5D=%3C+%2425"
               aria-label="Elevate Core on GoodFirms"
             >
               <img 
