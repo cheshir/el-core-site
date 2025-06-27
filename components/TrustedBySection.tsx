@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import DesignRushLogo from '@/assets/desingrush.png';
 
 const GOODFIRMS_SCRIPT_URL = "https://assets.goodfirms.co/assets/js/widget.min.js";
 const CLUTCH_SCRIPT_URL = "https://widget.clutch.co/static/js/widget.js";
@@ -99,6 +100,23 @@ export const TrustedBySection: React.FC = () => {
                 src="https://assets.goodfirms.co/badges/color-badge/business-services.svg" 
                 title="Top Business Services Company" 
                 alt="Top Business Services Company on GoodFirms" 
+              />
+            </a>
+          </div>
+
+          {/* DesignRush Badge */}
+          <div className="flex justify-center items-center">
+            <a 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              href="https://www.designrush.com/agency/profile/elevate-core"
+              aria-label="Elevate Core verified agency on DesignRush"
+            >
+              <img 
+                style={{ width: '120px', maxWidth: '100%' }} 
+                src={DesignRushLogo} 
+                title="Elevate Core verified agency on DesignRush" 
+                alt="Elevate Core verified agency on DesignRush" 
               />
             </a>
           </div>

@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => {
           'localhost',
           'web.el-core.orb.local', 
           'dev.el-core.orb.local',
+          'dev.el-core-site.orb.local',
         ]
       }
     };
