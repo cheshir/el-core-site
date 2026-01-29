@@ -25,7 +25,7 @@ const loadScript = (src: string, id: string): Promise<void> => {
   });
 };
 
-export const TrustedBySection: React.FC = () => {
+const TrustedBySection: React.FC = () => {
   const [scriptsLoaded, setScriptsLoaded] = useState(false);
 
   useEffect(() => {
@@ -65,74 +65,68 @@ export const TrustedBySection: React.FC = () => {
 
   // Placeholders are rendered immediately. The scripts will populate them when loaded.
   return (
-    <section id="trusted-by" className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-primary">
-            Verified. Rated. Trusted.
-          </h2>
-        </div>
-        
-        <div className="flex flex-col md:flex-row justify-center items-center flex-wrap gap-8 md:gap-10 lg:gap-12">
-          {/* Original Clutch Widget */}
-          <div 
-            className="clutch-widget min-h-[45px] flex justify-center items-center" 
-            style={{ width: '190px' }}
-            data-url="https://widget.clutch.co" 
-            data-widget-type="2" 
-            data-height="45" 
-            data-nofollow="true" 
-            data-expandifr="true" 
-            data-clutchcompany-id="2475120"
-            aria-live="polite"
-          ></div>
+    <section id="trusted-by" className="py-4 flex flex-col justify-center items-center flex-wrap gap-4">
+      {/* Original Clutch Widget */}
+      <div
+        className="clutch-widget min-h-[45px] flex justify-center items-center opacity-80 hover:opacity-100 transition-opacity"
+        style={{ width: '190px' }}
+        data-url="https://widget.clutch.co"
+        data-widget-type="2"
+        data-height="45"
+        data-nofollow="true"
+        data-expandifr="true"
+        data-clutchcompany-id="2475120"
+        aria-live="polite"
+      ></div>
 
-          {/* GoodFirms Badge */}
-          <div className="flex justify-center items-center">
-            <a 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              href="https://www.goodfirms.co/business-services/recruiting?location=hr&rate%5B1%5D=%3C+%2425"
-              aria-label="Elevate Core on GoodFirms"
-            >
-              <img 
-                style={{ width: '243px', maxWidth: '100%' }} 
-                src="https://assets.goodfirms.co/badges/color-badge/business-services.svg" 
-                title="Top Business Services Company" 
-                alt="Top Business Services Company on GoodFirms" 
-              />
-            </a>
-          </div>
+      {/* GoodFirms Badge */}
+      {/* <div className="flex justify-center items-center">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.goodfirms.co/business-services/recruiting?location=hr&rate%5B1%5D=%3C+%2425"
+          aria-label="Elevate Core on GoodFirms"
+        >
+          <img
+            style={{ width: '243px', maxWidth: '100%' }}
+            src="https://assets.goodfirms.co/badges/color-badge/business-services.svg"
+            title="Top Business Services Company"
+            alt="Top Business Services Company on GoodFirms"
+          />
+        </a>
+      </div> */}
 
-          {/* DesignRush Badge */}
-          <div className="flex justify-center items-center">
-            <a 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              href="https://www.designrush.com/agency/profile/elevate-core"
-              aria-label="Elevate Core verified agency on DesignRush"
-            >
-              <img 
-                style={{ width: '120px', maxWidth: '100%' }} 
-                src={DesignRushLogo} 
-                title="Elevate Core verified agency on DesignRush" 
-                alt="Elevate Core verified agency on DesignRush" 
-              />
-            </a>
-          </div>
-
-          {/* New GoodFirms Star Widget */}
-          <div 
-            className="goodfirm-widget min-h-[150px] flex justify-center items-center md:mx-5 -m-5"
-            style={{ width: '170px'}}
-            data-widget-type="goodfirms-widget-t3" 
-            data-widget-pattern="star-basic" 
-            data-height="150" 
-            data-company-id="176866"
-            aria-live="polite"
-          ></div>
-        </div>
+      {/* DesignRush Badge */}
+      <div className="flex justify-center items-center">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.designrush.com/agency/profile/elevate-core"
+          aria-label="Elevate Core verified agency on DesignRush"
+        >
+          <img
+            style={{ width: '120px', maxWidth: '100%' }}
+            src={DesignRushLogo}
+            title="Elevate Core verified agency on DesignRush"
+            alt="Elevate Core verified agency on DesignRush"
+          />
+        </a>
       </div>
+
+      {/* GoodFirms Badge */}
+      {/* For now, it's placed inside footer */}
+      {/* <div className="pt-8 opacity-80 hover:opacity-100 transition-opacity">
+        <a target="_blank" href="https://www.goodfirms.co/company/elevate-core" rel="noopener noreferrer" aria-label="Visit Elevate Core profile on GoodFirms">
+          <img
+            style={{ width: '243px' }}
+            src="https://assets.goodfirms.co/badges/color-badge/business-services.svg"
+            title="Top Business Services Company - Elevate Core"
+            alt="Top Business Services Company recognition for Elevate Core on GoodFirms"
+          />
+        </a>
+      </div> */}
     </section>
   );
 };
+
+export default TrustedBySection;

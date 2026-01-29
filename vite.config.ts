@@ -1,25 +1,29 @@
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
-    const env = loadEnv(mode, '.', '');
-    return {
-      define: {
-      },
-      resolve: {
-        alias: {
-          '@': path.resolve(__dirname, '.'),
-        }
-      },
-      server: {
-        allowedHosts: [
-          'el-core.eu',
-          'el-core-site.netlify.app',
-          'localhost',
-          'web.el-core.orb.local', 
-          'dev.el-core.orb.local',
-          'dev.el-core-site.orb.local',
-        ]
+  const env = loadEnv(mode, '.', '');
+  return {
+    server: {
+      port: 3000,
+      host: '0.0.0.0',
+      allowedHosts: [
+        'el-core.eu',
+        'localhost',
+        'web.elevate-core.orb.local',
+        'dev.elevate-core.orb.local',
+      ],
+    },
+    plugins: [react()],
+    define: {
+      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
       }
-    };
+    },
+  };
 });

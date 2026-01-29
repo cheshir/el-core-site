@@ -1,38 +1,18 @@
 
-export interface ServiceItem {
-  id: string;
-  icon?: React.ReactNode;
+import React from 'react';
+
+export interface NavItem {
+  label: string;
+  href: string;
+}
+
+export interface DomainItem {
   title: string;
   description: string;
-  impact: string;
 }
 
-export interface ProofPoint {
-  id: string;
-  text: string;
-  icon?: React.ReactNode;
-}
-
-export interface CaseStudy {
-  id: string;
-  companyName: string;
-  logoUrl?: string;
-  result: string;
-  detailsUrl?: string;
-}
-
-export interface Testimonial {
-  id: string;
-  quote: string;
-  clientName: string;
-  clientCompany: string;
-  serviceUsed: string;
-  logoUrl?: string;
-  photoUrl?: string;
-}
-
-export interface NavLink {
-  id: string;
+export interface SocialLink {
+  platform: string;
+  icon: React.ReactNode;
   href: string;
-  label: string;
 }
