@@ -91,7 +91,7 @@ const TrustStrip: React.FC = () => {
           ></div>
 
           {/* Vertical Separator */}
-          <div className="hidden sm:block h-10 w-px bg-gray-100 shrink-0"></div>
+          {/* <div className="hidden sm:block h-10 w-px bg-gray-100 shrink-0"></div> */}
 
           {/* Original Clutch Widget */}
           <div
@@ -107,7 +107,7 @@ const TrustStrip: React.FC = () => {
           ></div>
 
           {/* Vertical Separator */}
-          <div className="hidden sm:block h-10 w-px bg-gray-100 shrink-0"></div>
+          {/* <div className="hidden sm:block h-10 w-px bg-gray-100 shrink-0"></div> */}
 
           {/* DesignRush Widget */}
           <div className="shrink-0 flex items-center min-w-[150px] justify-center transition-opacity hover:opacity-80">
