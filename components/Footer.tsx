@@ -1,6 +1,5 @@
 import React from 'react';
 import Logo from './Logo';
-import TrustedBySection from './TrustedBySection';
 
 const Footer: React.FC = () => {
   const socialLinks = [
@@ -91,7 +90,6 @@ const Footer: React.FC = () => {
               <li><a href="#contact" className="hover:text-[#8DE9CF] transition-colors">Contact</a></li>
             </ul>
 
-            <TrustedBySection />
           </nav>
 
           <div className="space-y-10">
@@ -113,6 +111,7 @@ const Footer: React.FC = () => {
                 <p className="text-gray-400 text-[11px] font-bold uppercase tracking-widest">Executive & Tech Search</p>
               </div>
 
+              {/* GoodFirms Badge */}
               <div className="pt-8 opacity-80 hover:opacity-100 transition-opacity">
                 <a target="_blank" href="https://www.goodfirms.co/company/elevate-core" rel="noopener noreferrer" aria-label="Visit Elevate Core profile on GoodFirms">
                   <img

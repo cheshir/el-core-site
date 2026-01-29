@@ -11,8 +11,8 @@ export default defineConfig(({ mode }) => {
       allowedHosts: [
         'el-core.eu',
         'localhost',
-        'web.elevate-core.orb.local',
-        'dev.elevate-core.orb.local',
+        'dev.el-core-site.orb.local',
+        'web.el-core-site.orb.local',
       ],
     },
     plugins: [react()],
