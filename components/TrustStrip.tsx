@@ -86,7 +86,7 @@ const TrustStrip: React.FC = () => {
             className="goodfirm-widget shrink-0 flex items-center min-w-[140px] justify-center transition-opacity hover:opacity-80"
             data-widget-type="goodfirms-widget-t3"
             data-widget-pattern="star-basic"
-            data-height="100"
+            data-height="103"
             data-company-id="176866"
           ></div>
 
