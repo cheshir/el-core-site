@@ -628,7 +628,7 @@ html{scroll-padding-top:92px}
 @media(max-width:1120px){.site-shell button.menu-toggle{display:inline-flex}}
 .site-shell .dialog-close{color:var(--mint);background:transparent}
 .site-shell .dialog-close:hover{background:var(--mint);color:var(--navy)}
-.site-shell .language-switch :is(button,a){min-width:44px;min-height:44px;padding:8px 4px}
+.site-shell .language-switch :is(button,a){display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:8px 4px}
 @media(prefers-reduced-motion:reduce){
   .site-shell .button.button-primary,.site-shell :is(.dialog-close,.menu-toggle,.proof-controls button){transition:none}
   .site-shell .button.button-primary:active{transform:none}
@@ -869,5 +869,45 @@ html{scroll-padding-top:92px}
 .footer-goodfirms:hover{transform:translateY(-3px)}
 @media(max-width:600px){.footer-goodfirms{width:88px;margin-top:12px}}
 @media(prefers-reduced-motion:reduce){.footer-goodfirms{transition:none}.footer-goodfirms:hover{transform:none}}
+
+/* The footer keeps three desktop columns and pairs content by purpose on mobile. */
+.site-footer .footer-grid{column-gap:60px;row-gap:0;padding-bottom:0}
+.site-footer :is(.footer-left,.footer-right){display:contents}
+.site-footer .footer-brand{grid-column:1;grid-row:1}
+.site-footer .footer-goodfirms{grid-column:1;grid-row:2;align-self:start}
+.site-footer .footer-nav{grid-column:2;grid-row:1 / span 2}
+.site-footer .footer-contact{grid-column:3;grid-row:1 / span 2}
+.site-footer .footer-legal{grid-column:1/-1;grid-row:3;display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:18px 28px;margin-top:48px}
+@media(min-width:601px) and (max-width:850px){
+  .site-footer .footer-grid{column-gap:35px}
+  .site-footer .footer-contact{grid-column:1/-1;grid-row:3;margin-top:28px}
+  .site-footer .footer-legal{grid-row:4;margin-top:28px}
+}
+@media(max-width:600px){
+  .site-footer{padding:32px 0 20px}
+  .site-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:18px;row-gap:0}
+  .site-footer :is(.footer-left,.footer-right){display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+  .site-footer .footer-left{gap:24px}
+  .site-footer .footer-right{gap:18px}
+  .site-footer .footer-brand .brand-logo{height:34px}
+  .site-footer .footer-logo{margin-bottom:10px}
+  .site-footer .footer-brand p{font-size:12px;line-height:1.55}
+  .site-footer .footer-contact{gap:0;width:100%;font-size:12px}
+  .site-footer .footer-contact .eyebrow{margin-bottom:8px;font-size:12px;letter-spacing:.06em}
+  .site-footer .footer-contact>a{display:flex;align-items:center;min-height:36px;white-space:nowrap}
+  .site-footer .footer-socials{flex-direction:column;align-items:flex-start;gap:0;margin-top:6px;font-size:12px}
+  .site-footer .footer-socials>a{display:flex;align-items:center;min-height:36px}
+  .site-footer .footer-socials .social-icon-group{flex-basis:auto;gap:6px;margin-top:8px}
+  .site-footer .social-icon-link{width:44px;height:44px;padding:7px}
+  .site-footer .footer-goodfirms{width:80px;margin:0}
+  .site-footer .footer-nav{display:flex;flex-direction:column;align-items:flex-start;gap:0;width:100%;font-size:13px}
+  .site-footer .footer-nav .eyebrow{margin-bottom:8px}
+  .site-footer .footer-nav a{display:flex;align-items:center;min-height:36px;line-height:1.3}
+  .site-footer .footer-legal{display:flex;flex-direction:column;align-items:flex-start;flex-wrap:nowrap;gap:0;width:100%;margin:0;padding:12px 0 0;border-top:1px solid var(--line);font-size:11px;font-weight:400;line-height:1.3}
+  .site-footer .footer-legal :is(a,button){display:flex;align-items:center;min-height:40px;max-width:100%;font-size:inherit;font-weight:inherit;line-height:inherit;overflow-wrap:anywhere}
+  .site-footer .footer-bottom{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px 8px;margin-top:24px;padding-top:16px;font-size:11px}
+  .site-footer .footer-bottom>span:nth-child(2){grid-column:1/-1;grid-row:2;order:0;width:auto}
+  .site-footer .footer-bottom .language-switch{grid-column:2;grid-row:1}
+}
 
 html:not(.is-interactive) .reveal{opacity:1;transform:none}
