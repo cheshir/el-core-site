@@ -1,0 +1,251 @@
+/* Brand continuity: https://el-core.eu/ is the visual source of truth.
+   Preserve its centred hero, Inter hierarchy, navy/mint and rounded rectangles. */
+:root {
+  --deep: #102a43;
+  --card-radius: 28px;
+}
+
+.brand-contact-strip {
+  background: var(--navy);
+  color: #d0d9df;
+}
+.brand-contact-strip > .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 32px;
+  min-height: 44px;
+}
+.brand-contact-strip a,
+.brand-contact-strip button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.brand-contact-strip button { gap: 12px; color: var(--mint); }
+.brand-contact-strip a:hover,
+.brand-contact-strip button:hover { text-decoration: underline; text-underline-offset: 5px; }
+.site-header { background: #fff; border-bottom: 1px solid #e4e9ed; }
+.site-header .main-nav { width: min(1240px, calc(100% - 64px)); height: 80px; }
+.site-header .brand-logo { height: 44px; }
+.site-header .nav-text { font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.site-header .desktop-navigation { gap: 24px; }
+.site-header .header-booking {
+  background: var(--navy);
+  color: var(--mint);
+  padding: 12px 24px;
+}
+.site-header .header-booking:is(:hover, :focus-visible) {
+  background: var(--mint);
+  color: var(--navy);
+  box-shadow: none;
+  outline-color: var(--navy);
+}
+.recruitment-menu, .mobile-navigation { background: #fff; }
+
+.button {
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 16px 24px;
+  min-height: 52px;
+}
+.hero { background: var(--navy); text-align: center; }
+.hero-photo img {
+  opacity: .28;
+  filter: saturate(.6) brightness(1.05) contrast(.85);
+  object-position: center;
+}
+.hero-photo::after {
+  background: radial-gradient(ellipse at 50% 35%, transparent 15%, rgba(16,42,67,.72) 100%),
+    linear-gradient(0deg, var(--navy), transparent 65%);
+}
+.hero-content {
+  width: min(960px, calc(100% - 48px));
+  padding-top: 64px;
+  padding-bottom: 72px;
+}
+.hero .hero-brand-label {
+  display: inline-flex;
+  justify-content: center;
+  max-width: 100%;
+  padding: 8px 24px;
+  margin: 0 auto 32px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1.7;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--mint);
+}
+.hero h1 {
+  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -.03em;
+  max-width: 900px;
+  margin: 0 auto 32px;
+}
+.hero-positioning { max-width: 720px; margin: 0 auto 16px; font-size: 18px; }
+.hero-description { max-width: 680px; margin: 0 auto; font-size: 18px; line-height: 1.75; color: #d0d9df; }
+.hero-actions { justify-content: center; align-items: center; gap: 24px; margin-top: 40px; }
+.hero-actions .button { min-width: 280px; min-height: 60px; letter-spacing: .16em; }
+.hero .hero-explore { font-size: 15px; }
+
+.section h2 { font-weight: 700; letter-spacing: -.035em; line-height: 1.15; }
+.section h3, .team-domain-grid h4 { font-weight: 700; }
+.section .eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid var(--mint);
+  border-radius: 999px;
+  background: transparent;
+  padding: 6px 16px;
+  font-size: 11px;
+  line-height: 1.6;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.featured-proof, .approach-section, .services-section { background: #f9fafb; }
+#team-expertise:has(.team-editorial-story) { background: #fff; }
+.models-section, .final-section, .site-footer { background: var(--navy); }
+.models-intro, .services-section .section-heading {
+  max-width: 900px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.models-intro > p { max-width: 700px; margin: 24px auto 0; }
+.models-intro h2, .services-section h2 { font-size: clamp(32px, 3.7vw, 48px); }
+.models-intro h2 .mint { color: #fff; }
+.models-intro .eyebrow, .services-section .section-heading .eyebrow { margin-inline: auto; }
+.model-card, .support-row { border-radius: var(--card-radius); background: #fff; box-shadow: none; padding: 32px; }
+.partnership-model .card-top > span {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.partnership-model .model-icon,
+.partnership-model:is(:hover, :focus-within, :target) .model-icon {
+  width: 40px;
+  height: 40px;
+  flex-basis: 40px;
+  padding: 8px;
+  background: var(--navy);
+  color: var(--mint);
+  border-radius: 12px;
+}
+.partnership-model h3 { border: 0; padding-left: 0; font-size: 25px; }
+.partnership-model h3::before { display: none; }
+.partnership-model dt, .service-result-label, .case-summary dt, .approach-result strong {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.model-card .model-cta { width: 100%; justify-self: stretch; }
+.partnership-model .model-outcome { border-color: #e4e9ed; }
+.approach-section .approach-item {
+  background: #fff;
+  border: 1px solid #e4e9ed;
+  border-radius: var(--card-radius);
+  padding: 24px;
+}
+.approach-section .approach-number { background: var(--navy); color: var(--mint); border-radius: 12px; width: 40px; height: 40px; }
+.approach-section .approach-item h3 { font-size: 23px; }
+.support-row h3 { border: 0; padding-left: 0; }
+.team-founder .team-copy p { font-weight: 500; }
+.contact-dialog { background: var(--navy); border-radius: 24px; }
+.contact-options a { border-radius: 14px; }
+.contact-dialog h2 { font-weight: 700; }
+.site-footer .eyebrow { text-transform: uppercase; font-size: 12px; letter-spacing: .12em; }
+
+.cases-section { background: #f9fafb; color: var(--navy); color-scheme: light; border-top: 1px solid #e4e9ed; }
+.cases-section .eyebrow { color: var(--navy); }
+.cases-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+.cases-heading h2 { font-size: clamp(32px, 3.7vw, 48px); }
+.cases-controls { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.cases-counter { min-width: 48px; margin-right: 8px; font-size: 14px; font-variant-numeric: tabular-nums; }
+.cases-controls button { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #d4dce1; background: #fff; border-radius: 12px; }
+.cases-controls button:hover { background: var(--mint); border-color: var(--mint); }
+.cases-section :is(button, a):focus-visible { outline-color: var(--navy); }
+.case-detail { background: #fff; border: 1px solid #e4e9ed; border-radius: var(--card-radius); padding: 48px; }
+.case-detail-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, .45fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid #e4e9ed; }
+.case-detail-heading h3 { font-size: clamp(24px, 2.4vw, 32px); line-height: 1.25; margin-bottom: 16px; }
+.case-detail-heading p, .case-detail li { font-size: 16px; line-height: 1.7; color: #354d60; }
+.case-impact { border-left: 3px solid var(--mint); padding-left: 24px; align-self: start; }
+.case-impact span, .case-detail h4 { display: block; font-size: 12px; font-weight: 700; line-height: 1.6; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 12px; }
+.case-impact strong { display: block; font-size: 16px; line-height: 1.6; }
+.case-detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 48px; margin: 32px 0; }
+.case-detail ul { margin: 0; padding-left: 20px; list-style: disc; }
+.case-detail li + li { margin-top: 8px; }
+.case-detail li::marker { color: var(--navy); }
+.case-outcome { border-top: 1px solid #e4e9ed; padding-top: 32px; }
+.case-outcome p { border-left: 3px solid var(--mint); padding-left: 24px; font-size: 20px; font-weight: 600; line-height: 1.6; }
+.cases-cta { display: flex; flex-direction: column; align-items: center; gap: 24px; margin-top: 32px; text-align: center; }
+.cases-cta p { color: #354d60; font-size: 16px; }
+@media (max-width: 850px) {
+  .case-detail { padding: 32px; }
+  .case-detail-heading { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 600px) {
+  .cases-heading { align-items: flex-start; flex-direction: column; }
+  .case-detail { padding: 24px; }
+  .case-detail-grid { grid-template-columns: 1fr; gap: 24px; margin: 24px 0; }
+  .case-detail-heading { padding-bottom: 24px; }
+  .case-outcome { padding-top: 24px; }
+  .case-outcome p { font-size: 18px; padding-left: 16px; }
+  .cases-cta .button { width: 100%; }
+}
+
+@media (min-width: 851px) and (max-width: 1120px) {
+  .partnership-model { padding: 24px; }
+  .partnership-model .card-top { gap: 12px; }
+  .partnership-model .card-top > span { font-size: 11px; letter-spacing: .04em; }
+  .partnership-model h3 { font-size: 23px; }
+}
+@media (max-width: 850px) {
+  .approach-section .approach-item { padding: 24px; grid-template-columns: 40px minmax(0, 1fr); }
+  .approach-section .approach-item:last-child { border-bottom: 1px solid #e4e9ed; }
+  .models-intro, .services-section .section-heading { margin-bottom: 32px; }
+}
+@media (max-width: 600px) {
+  .site-header .main-nav { width: calc(100% - 40px); height: 72px; }
+  .site-header .brand-logo { height: 38px; }
+  .brand-contact-strip > .wrap { width: calc(100% - 40px); }
+  .brand-contact-strip a { display: none; }
+  .brand-contact-strip button { font-size: 10px; letter-spacing: .08em; padding: 8px 0; }
+  .hero-content { padding: 40px 0 48px; width: calc(100% - 40px); }
+  .hero .hero-brand-label { font-size: 10px; letter-spacing: .16em; padding: 8px 16px; margin-bottom: 32px; }
+  .hero h1, html[lang=uk] .hero h1 { font-size: clamp(29px, 8.8vw, 42px); line-height: 1.2; margin-bottom: 24px; }
+  .hero-positioning, .hero-description { font-size: 16px; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; margin-top: 32px; }
+  .hero-actions .button { min-width: 0; width: 100%; min-height: 56px; }
+  .hero .hero-explore { justify-content: center; }
+  .section .eyebrow { font-size: 10px; letter-spacing: .12em; padding: 6px 12px; margin-bottom: 20px; }
+  .models-intro, .services-section .section-heading { text-align: center; }
+  .model-card, .support-row { padding: 24px; }
+  .partnership-model .card-top > span { font-size: 12px; letter-spacing: .07em; }
+  .partnership-model h3 { font-size: 25px; }
+  .approach-section .approach-item { padding: 20px; }
+  .approach-section .approach-item h3 { font-size: 21px; }
+  .button { letter-spacing: .07em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .model-card:is(:hover, :focus-within), .button:is(:hover, :focus-visible) { transform: none; }
+}

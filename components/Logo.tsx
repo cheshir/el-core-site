@@ -1,3 +1,4 @@
+import { useLanguage } from '../LanguageContext';
 import React from 'react';
 
 interface LogoProps {
@@ -6,13 +7,14 @@ interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ className = "h-8", light = false }) => {
-  const accentColor = "#8DE9CF"; 
+  const { t } = useLanguage();
+  const accentColor = "var(--mint)";
   const textColor = light ? "#FFFFFF" : "#102a43";
 
   return (
     <div className={`flex items-center ${className}`}>
       <svg viewBox="0 0 320 100" className="h-full w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <title>Elevate Core - Strategic Recruitment Agency Logo</title>
+        <title>{t("Elevate Core — Recruiting Partner")}</title>
         <path 
           d="M30 65C30 45 90 25 150 55C210 85 270 65 270 45" 
           stroke={accentColor} 

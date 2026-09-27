@@ -1,52 +1,49 @@
-
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import CookieConsent from './components/CookieConsent';
+import LegalPage, { type LegalDocument } from './components/LegalPage';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import TrustStrip from './components/TrustStrip';
-import Philosophy from './components/Philosophy';
-import Expertise from './components/Expertise';
-import HowWeWork from './components/HowWeWork';
-import PerspectiveShift from './components/PerspectiveShift';
-import CaseCollection from './components/CaseCollection';
-import Packages from './components/Packages';
-import AdditionalServices from './components/AdditionalServices';
-import Insights from './components/Insights';
-import ContactSection from './components/ContactSection';
+import HomePage from './components/HomePage';
 import Footer from './components/Footer';
+import ContactDialog from './components/ContactDialog';
+import { useLanguage } from './LanguageContext';
+import type { ContactService, OpenContact } from './siteConfig';
 
-const App: React.FC = () => {
+export default function App() {
+  const [hash, setHash] = useState('');
+  const legalDocument = ['#privacy-policy', '#cookie-policy'].includes(hash) ? hash.slice(1) as LegalDocument : null;
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    const update = () => setHash(window.location.hash);
+    update();
+    window.addEventListener('hashchange', update);
+    window.addEventListener('popstate', update);
+    return () => { window.removeEventListener('hashchange', update); window.removeEventListener('popstate', update); };
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col antialiased overflow-x-hidden bg-white text-[#102a43]">
-      <Navbar />
-      <main className="flex-grow">
-        <Hero />
-        <TrustStrip />
-        <Philosophy />
-        <Expertise />
-        <HowWeWork />
-        <PerspectiveShift />
-        <Packages />
-        <AdditionalServices />
-        <Insights />
-        <CaseCollection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default App;
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      if (legalDocument) { window.scrollTo({ top: 0, behavior: 'instant' }); document.querySelector<HTMLElement>('.legal-heading h1')?.focus({ preventScroll: true }); }
+      else if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [hash, legalDocument]);
+  const [contactOpen, setContactOpen] = useState(false);
+  const [contactService, setContactService] = useState<ContactService>();
+  const openContact: OpenContact = service => { setContactService(service); setContactOpen(true); };
+  const { language } = useLanguage();
+  useEffect(() => {
+    document.documentElement.classList.add('is-interactive');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal:not(.active)').forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, [language, legalDocument]);
+  return <div className="site-shell">
+    <a className="skip-link" href="#main">{language === 'uk' ? 'Перейти до вмісту' : 'Skip to content'}</a>
+    <Navbar />
+    <main id="main">{legalDocument ? <LegalPage document={legalDocument} /> : <><Hero onContact={() => openContact()} /><HomePage onContact={openContact} /></>}</main>
+    <Footer />
+    <CookieConsent />
+    <ContactDialog service={contactService} open={contactOpen} onClose={() => setContactOpen(false)} />
+  </div>;
+}

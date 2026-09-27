@@ -1,46 +1,48 @@
+import { useLanguage } from '../LanguageContext';
 import React from 'react';
 
 const Expertise: React.FC = () => {
+  const { t } = useLanguage();
   const sectors = [
     {
-      title: "IT & Tech",
-      description: "For product and service companies, startups, and scale-ups where technology directly impacts growth.",
-      tags: ["SaaS", "iGaming", "AI / Data", "Startups", "FinTech", "MarTech"],
-      sectionLabel: "Typical client challenges",
+      title: t("IT & Tech"),
+      description: t("For product and service companies, startups, and scale-ups where technology directly impacts growth."),
+      tags: [t("SaaS"), t("iGaming"), t("AI / Data"), t("Startups"), t("FinTech"), t("MarTech")],
+      sectionLabel: t("Typical client challenges"),
       sectionItems: [
-        "Building or rebuilding a core team",
-        "Hiring Tech Lead, CTO, or Head-level roles",
-        "Strengthening product or delivery capabilities",
-        "Taking recruitment pressure off the CEO / CTO"
+        t("Building or rebuilding a core team"),
+        t("Hiring Tech Lead, CTO, or Head-level roles"),
+        t("Strengthening product or delivery capabilities"),
+        t("Taking recruitment pressure off the CEO / CTO")
       ],
-      outcome: "Structured hiring, realistic timelines, and teams that can sustain growth."
+      outcome: t("Structured hiring, realistic timelines, and teams that can sustain growth.")
     },
     {
-      title: "Performance Marketing",
-      description: "A dedicated direction with a deep understanding of traffic economics, performance metrics, and team dynamics.",
-      tags: ["Product", "Affiliate projects"],
-      sectionLabel: "Roles",
+      title: t("Performance Marketing"),
+      description: t("A dedicated direction with a deep understanding of traffic economics, performance metrics, and team dynamics."),
+      tags: [t("Product"), t("Affiliate projects")],
+      sectionLabel: t("Roles"),
       sectionItems: [
-        "Media Buyers",
-        "Affiliate Managers",
-        "Team Leads",
-        "Heads of Media Buying",
-        "Technical Operations"
+        t("Media Buyers"),
+        t("Affiliate Managers"),
+        t("Team Leads"),
+        t("Heads of Media Buying"),
+        t("Technical Operations")
       ],
-      outcome: "People who think in numbers, work systematically, and scale performance."
+      outcome: t("People who think in numbers, work systematically, and scale performance.")
     },
     {
-      title: "Non-IT & Business Roles",
-      description: "For companies where operational stability and sales performance are business-critical.",
-      tags: ["Agencies", "Logistics", "Sales"],
-      sectionLabel: "Roles",
+      title: t("Non-IT & Business Roles"),
+      description: t("For companies where operational stability and sales performance are business-critical."),
+      tags: [t("Agencies"), t("Logistics"), t("Sales")],
+      sectionLabel: t("Roles"),
       sectionItems: [
-        "Sales & Business Development",
-        "Marketing & Account Management",
-        "Logistics · Finance · Accounting",
-        "Operations · Administration"
+        t("Sales & Business Development"),
+        t("Marketing & Account Management"),
+        t("Logistics · Finance · Accounting"),
+        t("Operations · Administration")
       ],
-      outcome: "Reliable professionals who hold processes together."
+      outcome: t("Reliable professionals who hold processes together.")
     }
   ];
 
@@ -48,13 +50,9 @@ const Expertise: React.FC = () => {
     <section id="industry-focus" className="py-24 md:py-32 bg-[#102a43]">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <div className="reveal mb-16 md:mb-20">
-          <div className="inline-block py-1.5 px-5 border border-[#8DE9CF]/30 rounded-full text-[#8DE9CF] text-[10px] font-bold tracking-[0.4em] uppercase mb-6">
-            Specialization
-          </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Industry Focus</h2>
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed opacity-90">
-            Nuanced hiring where understanding the business context is just as important as reading the CV.
-          </p>
+          <div className="inline-block py-1.5 px-5 border border-[#8DE9CF]/30 rounded-full text-[#8DE9CF] text-[10px] font-bold tracking-[0.4em] uppercase mb-6">{t("Specialization")}</div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">{t("Industry Focus")}</h2>
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed opacity-90">{t("Nuanced hiring where understanding the business context is just as important as reading the CV.")}</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-6 md:gap-8 reveal">
@@ -98,7 +96,7 @@ const Expertise: React.FC = () => {
 
               {/* Outcome Section - Anchored and distinctive */}
               <div className="mt-8 pt-6 border-t border-gray-100">
-                <div className="text-[9px] font-bold text-[#5bb79c] uppercase tracking-[0.3em] mb-2.5">Outcome</div>
+                <div className="text-[9px] font-bold text-[#5bb79c] uppercase tracking-[0.3em] mb-2.5">{t("Outcome")}</div>
                 <p className="text-[15px] font-bold text-[#102a43] tracking-tight leading-snug">
                   {sector.outcome}
                 </p>

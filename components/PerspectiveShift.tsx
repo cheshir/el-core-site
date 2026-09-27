@@ -1,46 +1,48 @@
+import { useLanguage } from '../LanguageContext';
 import React from 'react';
 
 const PerspectiveShift: React.FC = () => {
+  const { t } = useLanguage();
   const stages = [
     {
-      label: "Stage 01",
-      subtitle: "The Starting Point",
+      label: t("Stage 01"),
+      subtitle: t("The Starting Point"),
       observations: [
         {
-          text: "The initial request is framed as recruitment support.",
+          text: t("The initial request is framed as recruitment support."),
           highlight: null
         },
         {
-          text: "Underneath, the real challenge is unclear priorities, roles, and expectations.",
-          highlight: "unclear priorities"
+          text: t("Underneath, the real challenge is unclear priorities, roles, and expectations."),
+          highlight: t("unclear priorities")
         }
       ]
     },
     {
-      label: "Stage 02",
-      subtitle: "The Immersion",
+      label: t("Stage 02"),
+      subtitle: t("The Immersion"),
       observations: [
         {
-          text: "Discussions move from individual vacancies to constraints, trade-offs, and business impact.",
-          highlight: "business impact"
+          text: t("Discussions move from individual vacancies to constraints, trade-offs, and business impact."),
+          highlight: t("business impact")
         },
         {
-          text: "Market honesty becomes a strategic input — not just hiring feedback.",
-          highlight: "strategic input"
+          text: t("Market honesty becomes a strategic input — not just hiring feedback."),
+          highlight: t("strategic input")
         }
       ]
     },
     {
-      label: "Stage 03",
-      subtitle: "The Outcome",
+      label: t("Stage 03"),
+      subtitle: t("The Outcome"),
       observations: [
         {
-          text: "Hiring becomes a system that supports growth instead of a recurring source of friction.",
-          highlight: "system"
+          text: t("Hiring becomes a system that supports growth instead of a recurring source of friction."),
+          highlight: t("system")
         },
         {
-          text: "The relationship evolves into a functional partnership embedded in business decisions.",
-          highlight: "partnership"
+          text: t("The relationship evolves into a functional partnership embedded in business decisions."),
+          highlight: t("partnership")
         }
       ]
     }
@@ -51,15 +53,9 @@ const PerspectiveShift: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header - Consistent Labeling - Now H2 for SEO */}
         <div className="max-w-4xl mx-auto reveal text-center mb-20">
-          <h2 className="inline-block py-1 px-4 border border-[#8DE9CF] rounded-full text-[#8DE9CF] text-[10px] font-bold tracking-[0.3em] uppercase mb-8">
-            Structural Progression
-          </h2>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#102a43] mb-6 tracking-tight">
-            The Strategic Shift
-          </h2>
-          <p className="text-xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto">
-            When recruitment stops being transactional, the entire <span className="text-[#102a43] font-bold">decision-making logic</span> transforms.
-          </p>
+          <h2 className="inline-block py-1 px-4 border border-[#8DE9CF] rounded-full text-[#8DE9CF] text-[10px] font-bold tracking-[0.3em] uppercase mb-8">{t("Structural Progression")}</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#102a43] mb-6 tracking-tight">{t("The Strategic Shift")}</h2>
+          <p className="text-xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto">{t("When recruitment stops being transactional, the entire")}{" "}<span className="text-[#102a43] font-bold">{t("decision-making logic")}</span>{" "}{t("transforms.")}</p>
         </div>
 
         {/* Timeline Structure - Increased Density */}
@@ -113,13 +109,10 @@ const PerspectiveShift: React.FC = () => {
         {/* Footer Statement - More Integrated */}
         <div className="mt-24 text-center reveal">
           <div className="inline-block bg-[#102a43] text-white px-8 py-10 rounded-[2.5rem] shadow-xl max-w-2xl w-full">
-             <p className="text-base md:text-lg font-bold tracking-tight mb-4">
-              This shift allows us to build teams that scale — <span className="text-[#8DE9CF] italic font-normal">not just fill roles.</span>
+             <p className="text-base md:text-lg font-bold tracking-tight mb-4">{t("This shift allows us to build teams that scale —")}{" "}<span className="text-[#8DE9CF] italic font-normal">{t("not just fill roles.")}</span>
             </p>
             <div className="h-px w-12 bg-[#8DE9CF]/20 mx-auto mb-4"></div>
-            <p className="text-[#8DE9CF]/40 text-[9px] font-bold uppercase tracking-[0.4em]">
-              Observation-Based Methodology
-            </p>
+            <p className="text-[#8DE9CF]/40 text-[9px] font-bold uppercase tracking-[0.4em]">{t("Observation-Based Methodology")}</p>
           </div>
         </div>
       </div>
