@@ -911,3 +911,12 @@ html{scroll-padding-top:92px}
 }
 
 html:not(.is-interactive) .reveal{opacity:1;transform:none}
+
+/* The supplied Elevate Core artwork is taller than the previous wordmark. */
+.brand-logo img{display:block;height:100%;width:auto;object-fit:contain}
+.site-header .brand-logo{height:60px}
+.site-footer .footer-brand .brand-logo{height:58px}
+@media(max-width:600px){
+  .site-header .brand-logo{height:54px}
+  .site-footer .footer-brand .brand-logo{height:56px}
+}

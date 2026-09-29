@@ -1,5 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <style>@keyframes beacon{0%,100%{opacity:1}50%{opacity:.55}}.beacon{animation:beacon 2.4s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.beacon{animation:none}}</style>
-  <rect width="64" height="64" rx="16" fill="#102a43"/>
-  <circle class="beacon" cx="32" cy="32" r="23" fill="#8DE9CF"/>
+  <rect width="64" height="64" rx="14" fill="#102a43"/>
+  <g fill="none" stroke="#8DE9CF" stroke-linecap="round" stroke-width="2.7">
+    <path d="M14 31c9-17 21-24 32-17 6 4 9 10 9 16"/>
+    <path d="M8 37c1 12 10 20 21 17 10-3 16-13 20-22"/>
+  </g>
+  <circle cx="34" cy="51" r="4.4" fill="#8DE9CF"/>
+  <circle cx="55" cy="34" r="3.4" fill="#8DE9CF"/>
 </svg>
