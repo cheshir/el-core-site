@@ -1,6 +1,6 @@
 import { useLanguage } from '../LanguageContext';
-import DarkLogo from '../assets/brand/elevate-core-logo-dark.png';
-import LightLogo from '../assets/brand/elevate-core-logo-light.png';
+import DarkLogo from '../assets/brand/elevate-core-logo-dark.svg';
+import LightLogo from '../assets/brand/elevate-core-logo-light.svg';
 
 interface LogoProps {
   className?: string;
@@ -14,8 +14,8 @@ export default function Logo({ className = 'h-8', light = false }: LogoProps) {
       <img
         src={light ? LightLogo : DarkLogo}
         alt={t('Elevate Core — Recruiting Partner')}
-        width="278"
-        height="168"
+        width="940"
+        height="560"
         draggable={false}
       />
     </div>
