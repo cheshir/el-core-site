@@ -920,3 +920,14 @@ html:not(.is-interactive) .reveal{opacity:1;transform:none}
   .site-header .brand-logo{height:54px}
   .site-footer .footer-brand .brand-logo{height:56px}
 }
+
+/* Partner logos retain their original brand colours on a shared white surface. */
+.partners-section{background:#fff;color:var(--navy)}
+.partners-section .eyebrow{color:var(--navy)}
+.partners-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;gap:40px;list-style:none;padding:0;margin:0}
+.partner-card{display:flex;align-items:center;justify-content:center;min-height:180px;padding:16px;color:var(--navy);transition:transform .2s}
+.partner-card:hover{transform:translateY(-3px)}
+.partner-card:focus-visible{outline:2px solid var(--navy);outline-offset:6px}
+.partner-card img{display:block;width:100%;max-width:240px;height:140px;object-fit:contain}
+@media(max-width:900px){.partners-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}
+@media(max-width:540px){.partners-grid{grid-template-columns:1fr;gap:16px}.partner-card{min-height:130px}.partner-card img{height:120px}}

@@ -2,6 +2,7 @@ import React from 'react';
 import ModelIcon from './ModelIcon';
 import TeamExpertise from './TeamExpertise';
 import TrustStrip from './TrustStrip';
+import PartnersSection from './PartnersSection';
 import { useLanguage } from '../LanguageContext';
 
 import type { ContactService, OpenContact } from '../siteConfig';
@@ -134,6 +135,8 @@ export default function HomePage({ onContact }: Props) {
     </div></section>
 
     <section className="section blog-section" id="blog" aria-labelledby="blog-title"><div className="wrap"><span className="eyebrow reveal">{c('Blog', 'Блог')}</span><div className="blog-content reveal"><div><h2 id="blog-title">{c('Hiring decisions, unpacked.', 'Розбираємо рішення про найм.')}</h2><p>{c('On hiring, teams and the decisions that shape a business.', 'Про найм, команди та рішення, які формують бізнес.')}</p></div><span className="blog-status">{c('Coming soon', 'Незабаром')}</span></div></div></section>
+
+    <PartnersSection />
 
     <section className="section final-section" id="contact"><div className="wrap reveal"><span className="eyebrow">{c('Your next step', 'Ваш наступний крок')}</span><h2>{c('What does your business need from recruitment right now?', 'Що потрібно вашому бізнесу від рекрутингу зараз?')}</h2><p>{c('Tell us what is changing and which roles matter next. We define the scope, priorities and responsibilities together.', 'Розкажіть, що змінюється та які ролі зараз важливі. Разом визначаємо обсяг роботи, пріоритети й відповідальність.')}</p><button className="button button-primary" onClick={() => onContact()}>{c('Let’s talk', 'Поговорімо')}</button></div></section>
   </>;
