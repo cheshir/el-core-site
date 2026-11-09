@@ -929,6 +929,7 @@ html:not(.is-interactive) .reveal{opacity:1;transform:none}
 .partner-card{display:flex;align-items:center;justify-content:center;min-height:180px;padding:16px;color:var(--navy);transition:transform .2s}
 .partner-card:hover{transform:translateY(-3px)}
 .partner-card:focus-visible{outline:2px solid var(--navy);outline-offset:6px}
-.partner-card img{display:block;width:100%;max-width:240px;height:140px;object-fit:contain}
+.partner-logo{display:block;position:relative;overflow:hidden;flex-shrink:0}
+.partner-logo img{display:block;position:absolute;max-width:none;height:auto}
 @media(max-width:900px){.partners-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}
-@media(max-width:540px){.partners-grid{grid-template-columns:1fr;gap:16px}.partner-card{min-height:130px}.partner-card img{height:120px}}
+@media(max-width:540px){.partners-grid{grid-template-columns:1fr;gap:16px}.partner-card{min-height:130px}}
