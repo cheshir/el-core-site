@@ -15,8 +15,7 @@ export default function PartnersSection() {
   return <section className="section partners-section" id="partners" aria-labelledby="partners-title">
     <div className="wrap">
       <div className="section-heading reveal">
-        <span className="eyebrow">Elevate Core</span>
-        <h2 id="partners-title">{ukrainian ? 'Партнери' : 'Partners'}</h2>
+        <span className="eyebrow" id="partners-title" role="heading" aria-level={2}>{ukrainian ? 'Партнери' : 'Partners'}</span>
       </div>
       <ul className="partners-grid">
         {partners.map(partner => <li key={partner.url} className="reveal">
