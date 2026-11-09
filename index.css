@@ -922,8 +922,9 @@ html:not(.is-interactive) .reveal{opacity:1;transform:none}
 }
 
 /* Partner logos retain their original brand colours on a shared white surface. */
-.partners-section{background:#fff;color:var(--navy)}
-.partners-section .eyebrow{color:var(--navy)}
+.section.partners-section{padding-block:56px;background:#fff;color:var(--navy)}
+.partners-section .section-heading{margin-bottom:20px}
+.partners-section .eyebrow{color:var(--navy);margin-bottom:0}
 .partners-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;gap:40px;list-style:none;padding:0;margin:0}
 .partner-card{display:flex;align-items:center;justify-content:center;min-height:180px;padding:16px;color:var(--navy);transition:transform .2s}
 .partner-card:hover{transform:translateY(-3px)}
